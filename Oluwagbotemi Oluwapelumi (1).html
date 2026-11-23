@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Oluwagbotemi Oluwapelumi: PhD student in Computer Science working on metaheuristic optimization and interpretable TinyML.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🎓%3C/text%3E%3C/svg%3E">
 <title>Oluwagbotemi Oluwapelumi</title>
 <style>
 :root{--bg:#f6f4ff;--card:#fff;--text:#1b1740;--mut:#5b5880;--a:#7c3aed;--b:#ec4899;--c:#0891b2;--line:#e2defa;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -52,18 +54,13 @@ h2{font:800 1.7rem system-ui,sans-serif;margin:0 0 6px}h2 span{background:linear
 .labbody{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center}
 .labbody canvas{width:100%;aspect-ratio:1;border-radius:14px;display:block;transition:opacity .35s}
 .fm{overflow-x:auto;padding:6px 0;font-size:1.02rem}.info{font:.85rem system-ui,sans-serif;color:var(--mut);margin:10px 0}.info b{color:var(--b)}
-#edit{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;font-family:system-ui,sans-serif}
-#edit .pn{display:none;width:min(360px,calc(100vw - 28px));max-height:70vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 20px 50px -12px #0006;font-size:.85rem}
-#edit.open .pn{display:block}#edit label{display:block;margin:8px 0 3px;font-weight:700}
-#edit textarea,#edit input[type=text]{width:100%;font:inherit;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
 footer{padding:50px 0 70px;color:var(--mut);font:.85rem system-ui,sans-serif;text-align:center}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<script type="application/json" id="data">{"bio":"I’m a PhD student in Computer Science at the University of Silesia in Katowice, with a Master’s degree in Computer Science and a Bachelor of Engineering in Electrical and Electronics Engineering (Valedictorian, CGPA 4.97/5.00). My research centres on metaheuristic optimization and evolutionary computation, and I’m extending it towards interpretable models, generative AI and computational aesthetics. Before research, I worked as a core network engineer at Huawei on Airtel’s network in Nigeria.","status":"I’m in the first year of my doctorate, supervised by Prof. Urszula Boryczka. The project asks when a small, readable tree model, built by ant colony search and distilled from a neural network, can match a compressed neural network on a microcontroller. The plan below is a living document that keeps changing as I learn.","gh":"","docs":{"sa":"/_blob/234839ae53753767974951d231bb9651","plan":"/_blob/05124bd4f3c70e351852809b0b4320a2","lit":"/_blob/77209973c5b4edc255d6fbd41aede3da"},"prog":[["Literature review (45 sources)","done"],["First research plan draft","done"],["Reproduce ant colony decision trees and baselines on one board","now"],["Measurement testbed: ESP32-S3, RP2350, STM32, nRF52","next"],["Footprint-aware ant colony forest prototype and first paper","next"]]}</script>
+<script type="application/json" id="data">{"bio":"I’m a PhD student in Computer Science at the University of Silesia in Katowice, with a Master’s degree in Computer Science and a Bachelor of Engineering in Electrical and Electronics Engineering (Valedictorian, CGPA 4.97/5.00). My research centres on metaheuristic optimization and evolutionary computation, and I’m extending it towards interpretable models, generative AI and computational aesthetics. Before research, I worked as a core network engineer at Huawei on Airtel’s network in Nigeria.","status":"I’m in the first year of my doctorate, supervised by Prof. Urszula Boryczka. The project asks when a small, readable tree model, built by ant colony search and distilled from a neural network, can match a compressed neural network on a microcontroller. The plan below is a living document that keeps changing as I learn.","gh":"","docs":{"sa":"docs/simulated-annealing-report.pdf","plan":"docs/research-plan.pdf","lit":"docs/literature-review.pdf"},"prog":[["Literature review (45 sources)","done"],["First research plan draft","done"],["Reproduce ant colony decision trees and baselines on one board","now"],["Measurement testbed: ESP32-S3, RP2350, STM32, nRF52","next"],["Footprint-aware ant colony forest prototype and first paper","next"]]}</script>
 <div id="app"></div>
-<div id="edit"></div>
 
 <script>
 window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'local'}};
@@ -155,21 +152,7 @@ function reveal(){var io=new IntersectionObserver(function(es){es.forEach(functi
 [].forEach.call(document.querySelectorAll('.rv'),function(e){io.observe(e)})}
 var R=['PhD student in Computer Science','Metaheuristic optimization','Evolutionary computation','Interpretable TinyML'],ri=0,rt;
 function roles(){clearInterval(rt);var e=document.getElementById('role');rt=setInterval(function(){e.className='role o';setTimeout(function(){ri=(ri+1)%R.length;e.textContent=R[ri];e.className='role'},400)},3200)}
-/* ---- owner-only editing ---- */
-function save(){var c=document.documentElement.cloneNode(true);c.querySelector('#app').innerHTML='';c.querySelector('#app').className='';c.querySelector('#edit').innerHTML='';
-[].forEach.call(c.querySelectorAll('[id^=MJX],style[id^=MJX]'),function(e){e.remove()});
-c.querySelector('#data').textContent=JSON.stringify(S).replace(/</g,'\\u003c');return'<!DOCTYPE html>\n'+c.outerHTML}
-function editor(){var e=document.getElementById('edit');EDIT=true;render();
-e.innerHTML='<div class="pn"><b>Owner editor</b> (only you can see this)<label>About</label><textarea id="eb" rows="5"></textarea><label>Doctoral status</label><textarea id="es" rows="4"></textarea><label>GitHub URL</label><input type="text" id="eg" placeholder="https://github.com/…">'+
-'<label>Literature review PDF</label><input type="file" accept=".pdf" data-k="lit"><label>Research plan PDF</label><input type="file" accept=".pdf" data-k="plan"><label>Simulated annealing report PDF</label><input type="file" accept=".pdf" data-k="sa">'+
-'<p>Tip: click a progress chip to cycle done / in progress / next.</p><button class="btn" id="pub">Publish changes</button> <span id="ps"></span></div><button class="btn" id="tg">✎ Edit page</button>';
-document.getElementById('eb').value=S.bio;document.getElementById('es').value=S.status;document.getElementById('eg').value=S.gh;
-document.getElementById('tg').onclick=function(){e.classList.toggle('open')};
-[].forEach.call(e.querySelectorAll('input[type=file]'),function(i){i.onchange=async function(){var m=document.getElementById('ps');try{var a=await claude.use('assets');m.textContent='Uploading…';var r=await a.upload(i.files[0]);S.docs[i.dataset.k]=r.url;m.textContent='Uploaded. Now publish.';render()}catch(x){m.textContent='Upload failed.'}}});
-document.getElementById('pub').onclick=async function(){var m=document.getElementById('ps');S.bio=document.getElementById('eb').value;S.status=document.getElementById('es').value;S.gh=document.getElementById('eg').value.trim();
-try{var a=await claude.use('artifact');m.textContent='Publishing…';await a.publish(save())}catch(x){m.textContent='Could not publish: '+(x&&x.code||'error')}}}
 render();
-if(window.claude)claude.use('user').then(function(u){if(u&&u.isOwner())editor()}).catch(function(){});
 </script>
 </body>
 </html>
