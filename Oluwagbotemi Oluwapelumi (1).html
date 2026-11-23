@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oluwagbotemi Oluwapelumi</title>
+<style>
+:root{--bg:#f6f4ff;--card:#fff;--text:#1b1740;--mut:#5b5880;--a:#7c3aed;--b:#ec4899;--c:#0891b2;--line:#e2defa;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0b1f;--card:#17143a;--text:#efedff;--mut:#a6a2cf;--a:#a78bfa;--b:#f472b6;--c:#22d3ee;--line:#2b2760;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0b1f;--card:#17143a;--text:#efedff;--mut:#a6a2cf;--a:#a78bfa;--b:#f472b6;--c:#22d3ee;--line:#2b2760;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:var(--a)}.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav b{margin-right:auto;font:800 .95rem system-ui,sans-serif;white-space:nowrap;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav a{font:600 .85rem system-ui,sans-serif;text-decoration:none;color:var(--text);padding:6px 12px;border-radius:99px;transition:.25s}
+nav a:hover{background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+.hero{position:relative;overflow:hidden;padding:90px 0 70px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;animation:float 14s ease-in-out infinite;pointer-events:none}
+.b1{width:340px;height:340px;background:var(--a);top:-80px;left:-60px}.b2{width:300px;height:300px;background:var(--b);top:40px;right:-70px;animation-delay:-5s}.b3{width:260px;height:260px;background:var(--c);bottom:-100px;left:38%;animation-delay:-9s}
+@keyframes float{50%{transform:translate(40px,-30px) scale(1.12)}}
+@keyframes shift{50%{background-position:100% 50%}}
+h1{position:relative;font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.1;margin:0 0 10px;background:linear-gradient(110deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 9s ease infinite}
+.role{position:relative;font:600 1.2rem system-ui,sans-serif;color:var(--mut);min-height:1.7em;transition:opacity .4s}
+.role.o{opacity:0}
+.cta{position:relative;margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;font:700 .9rem system-ui,sans-serif;padding:10px 18px;border-radius:99px;text-decoration:none;color:#fff;background:linear-gradient(110deg,var(--a),var(--b));transition:transform .25s,box-shadow .25s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -8px var(--b)}.btn.s{background:transparent;color:var(--text);border:1.5px solid var(--line)}
+.btn.off{opacity:.55;cursor:default;background:var(--line);color:var(--mut)}.btn.off:hover{transform:none;box-shadow:none}
+section{padding:46px 0 6px}.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+h2{font:800 1.7rem system-ui,sans-serif;margin:0 0 6px}h2 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-5px);border-color:var(--a);box-shadow:0 16px 34px -18px var(--a)}
+.card h3{margin:2px 0 6px;font-size:1.08rem;line-height:1.3}.card p{margin:0 0 10px;color:var(--mut);font-size:.95rem}
+.tag{display:inline-block;font:700 .7rem system-ui,sans-serif;letter-spacing:.08em;color:#fff;padding:3px 10px;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--c))}.tag.p{background:linear-gradient(90deg,var(--b),var(--a))}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:18px 0}
+.stat{text-align:center;padding:14px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.stat b{display:block;font:800 1.9rem system-ui,sans-serif;background:linear-gradient(90deg,var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}.stat small{font:.8rem system-ui,sans-serif;color:var(--mut)}
+.tl{list-style:none;margin:16px 0;padding:0 0 0 22px;border-left:3px solid var(--line)}
+.tl li{position:relative;padding:4px 0 14px}.tl li::before{content:"";position:absolute;left:-30px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--line)}
+.tl li.done::before{background:var(--c)}.tl li.now::before{background:var(--b);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--b)}100%{box-shadow:0 0 0 12px transparent}}
+.chip{font:700 .7rem system-ui,sans-serif;padding:2px 9px;border-radius:99px;margin-left:8px;background:var(--line);color:var(--mut)}.done .chip{background:var(--c);color:#fff}.now .chip{background:var(--b);color:#fff}
+.edit .chip{cursor:pointer;outline:1px dashed var(--a)}
+.lab{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;margin-top:18px}
+.tabs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.tabs button{font:600 .8rem system-ui,sans-serif;padding:6px 13px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--text);cursor:pointer;transition:.25s}
+.tabs button:hover{border-color:var(--a);transform:translateY(-2px)}.tabs button.on{background:linear-gradient(110deg,var(--a),var(--b));color:#fff;border-color:transparent}
+.labbody{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center}
+.labbody canvas{width:100%;aspect-ratio:1;border-radius:14px;display:block;transition:opacity .35s}
+.fm{overflow-x:auto;padding:6px 0;font-size:1.02rem}.info{font:.85rem system-ui,sans-serif;color:var(--mut);margin:10px 0}.info b{color:var(--b)}
+#edit{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;font-family:system-ui,sans-serif}
+#edit .pn{display:none;width:min(360px,calc(100vw - 28px));max-height:70vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 20px 50px -12px #0006;font-size:.85rem}
+#edit.open .pn{display:block}#edit label{display:block;margin:8px 0 3px;font-weight:700}
+#edit textarea,#edit input[type=text]{width:100%;font:inherit;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text)}
+footer{padding:50px 0 70px;color:var(--mut);font:.85rem system-ui,sans-serif;text-align:center}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<script type="application/json" id="data">{"bio":"I’m a PhD student in Computer Science at the University of Silesia in Katowice, with a Master’s degree in Computer Science and a Bachelor of Engineering in Electrical and Electronics Engineering (Valedictorian, CGPA 4.97/5.00). My research centres on metaheuristic optimization and evolutionary computation, and I’m extending it towards interpretable models, generative AI and computational aesthetics. Before research, I worked as a core network engineer at Huawei on Airtel’s network in Nigeria.","status":"I’m in the first year of my doctorate, supervised by Prof. Urszula Boryczka. The project asks when a small, readable tree model, built by ant colony search and distilled from a neural network, can match a compressed neural network on a microcontroller. The plan below is a living document that keeps changing as I learn.","gh":"","docs":{"sa":"/_blob/234839ae53753767974951d231bb9651","plan":"/_blob/05124bd4f3c70e351852809b0b4320a2","lit":"/_blob/77209973c5b4edc255d6fbd41aede3da"},"prog":[["Literature review (45 sources)","done"],["First research plan draft","done"],["Reproduce ant colony decision trees and baselines on one board","now"],["Measurement testbed: ESP32-S3, RP2350, STM32, nRF52","next"],["Footprint-aware ant colony forest prototype and first paper","next"]]}</script>
+<div id="app"></div>
+<div id="edit"></div>
+
+<script>
+window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]},svg:{fontCache:'local'}};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js" async></script>
+<script>
+var S=JSON.parse(document.getElementById('data').textContent),EDIT=false,cur=0,G={},raf=0;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function lk(u,l,s){return u?'<a class="btn'+(s?' s':'')+'" href="'+esc(u)+'" target="_blank" rel="noopener">'+l+'</a>':'<span class="btn off">'+l+' · coming soon</span>'}
+var P=Math.PI,sin=Math.sin,cos=Math.cos,sqrt=Math.sqrt,exp=Math.exp,abs=Math.abs;
+var F=[
+["Sphere","f=x^2+y^2",5.12,function(x,y){return x*x+y*y},[0,0]],
+["Rastrigin","f=20+\\sum_{i=1}^{2}\\left(x_i^2-10\\cos 2\\pi x_i\\right)",5.12,function(x,y){return 20+x*x-10*cos(2*P*x)+y*y-10*cos(2*P*y)},[0,0]],
+["Ackley","f=-20e^{-0.2\\sqrt{\\frac{x^2+y^2}{2}}}-e^{\\frac{\\cos 2\\pi x+\\cos 2\\pi y}{2}}+20+e",5,function(x,y){return -20*exp(-.2*sqrt((x*x+y*y)/2))-exp((cos(2*P*x)+cos(2*P*y))/2)+20+Math.E},[0,0]],
+["Rosenbrock","f=(1-x)^2+100(y-x^2)^2",2.5,function(x,y){return (1-x)*(1-x)+100*(y-x*x)*(y-x*x)},[1,1]],
+["Griewank","f=1+\\frac{x^2+y^2}{4000}-\\cos x\\cos\\frac{y}{\\sqrt2}",10,function(x,y){return 1+(x*x+y*y)/4000-cos(x)*cos(y/sqrt(2))},[0,0]],
+["Schwefel","f=837.97-x\\sin\\sqrt{|x|}-y\\sin\\sqrt{|y|}",500,function(x,y){return 837.9658-x*sin(sqrt(abs(x)))-y*sin(sqrt(abs(y)))},[420.97,420.97]],
+["Lévy","f=\\sin^2\\pi w_1+(w_1-1)^2[1+10\\sin^2(\\pi w_1+1)]+(w_2-1)^2[1+\\sin^2 2\\pi w_2],\\; w_i=1+\\tfrac{x_i-1}{4}",10,function(x,y){var w=1+(x-1)/4,v=1+(y-1)/4;return sin(P*w)*sin(P*w)+(w-1)*(w-1)*(1+10*sin(P*w+1)*sin(P*w+1))+(v-1)*(v-1)*(1+sin(2*P*v)*sin(2*P*v))},[1,1]],
+["Himmelblau","f=(x^2+y-11)^2+(x+y^2-7)^2",5,function(x,y){return Math.pow(x*x+y-11,2)+Math.pow(x+y*y-7,2)},[3,2]],
+["Beale","f=\\sum_{k=1}^{3}(c_k-x+xy^k)^2,\\; c=(1.5,\\,2.25,\\,2.625)",4.5,function(x,y){return Math.pow(1.5-x+x*y,2)+Math.pow(2.25-x+x*y*y,2)+Math.pow(2.625-x+x*y*y*y,2)},[3,.5]],
+["Booth","f=(x+2y-7)^2+(2x+y-5)^2",10,function(x,y){return Math.pow(x+2*y-7,2)+Math.pow(2*x+y-5,2)},[1,3]],
+["Matyas","f=0.26(x^2+y^2)-0.48xy",10,function(x,y){return .26*(x*x+y*y)-.48*x*y},[0,0]],
+["Easom","f=-\\cos x\\cos y\\,e^{-(x-\\pi)^2-(y-\\pi)^2}",6,function(x,y){return -cos(x)*cos(y)*exp(-(x-P)*(x-P)-(y-P)*(y-P))},[P,P]],
+["Six-hump camel","f=\\left(4-2.1x^2+\\tfrac{x^4}{3}\\right)x^2+xy+(4y^2-4)y^2",2.5,function(x,y){return (4-2.1*x*x+x*x*x*x/3)*x*x+x*y+(4*y*y-4)*y*y},[.0898,-.7126]],
+["Styblinski–Tang","f=\\tfrac12\\sum_{i}\\left(x_i^4-16x_i^2+5x_i\\right)",5,function(x,y){return .5*(x*x*x*x-16*x*x+5*x+y*y*y*y-16*y*y+5*y)},[-2.9035,-2.9035]],
+["Zakharov","f=\\sum x_i^2+\\Big(\\sum 0.5\\,i\\,x_i\\Big)^2+\\Big(\\sum 0.5\\,i\\,x_i\\Big)^4",5,function(x,y){var s=.5*x+y;return x*x+y*y+s*s+s*s*s*s},[0,0]],
+["Schaffer N.2","f=0.5+\\frac{\\sin^2(x^2-y^2)-0.5}{\\left(1+0.001(x^2+y^2)\\right)^2}",100,function(x,y){var q=1+.001*(x*x+y*y);return .5+(sin(x*x-y*y)*sin(x*x-y*y)-.5)/(q*q)},[0,0]],
+["Bohachevsky","f=x^2+2y^2-0.3\\cos 3\\pi x-0.4\\cos 4\\pi y+0.7",10,function(x,y){return x*x+2*y*y-.3*cos(3*P*x)-.4*cos(4*P*y)+.7},[0,0]],
+["Drop-wave","f=-\\frac{1+\\cos\\left(12\\sqrt{x^2+y^2}\\right)}{0.5(x^2+y^2)+2}",5.12,function(x,y){return -(1+cos(12*sqrt(x*x+y*y)))/(.5*(x*x+y*y)+2)},[0,0]]
+];
+var STOPS=[[18,10,70],[88,28,200],[236,72,153],[253,200,60]];
+function col(u){var s=u*3,i=Math.min(2,Math.floor(s)),t=s-i,a=STOPS[i],b=STOPS[i+1];return[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]}
+function render(){
+var p=S.prog.map(function(r,i){return'<li class="'+r[1]+'"><span>'+esc(r[0])+'</span><span class="chip" data-p="'+i+'">'+({done:'done',now:'in progress',next:'next'})[r[1]]+'</span></li>'}).join('');
+var rq=['Do ant colony forests beat greedy compressed trees at equal measured memory?','Does counting feature-computation cost cut latency and energy?','Does distilling from a neural teacher help small models?','How well can footprint be predicted before deployment?','Where do quantized neural networks still win?'];
+var tabs=F.map(function(f,i){return'<button data-i="'+i+'">'+f[0]+'</button>'}).join('');
+document.getElementById('app').className=EDIT?'edit':'';
+document.getElementById('app').innerHTML=
+'<nav><div class="wrap"><b>O. Oluwapelumi</b><a href="#about">About</a><a href="#doctoral">Doctoral</a><a href="#work">Work</a><a href="#contact">Contact</a></div></nav>'+
+'<header class="hero"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><div class="wrap"><h1>Oluwagbotemi Oluwapelumi</h1><div class="role" id="role">PhD student in Computer Science</div><div class="cta"><a class="btn" href="#doctoral">Doctoral research</a><a class="btn s" href="#lab">Play with the maths</a></div></div></header>'+
+'<main class="wrap">'+
+'<section id="about" class="rv"><h2><span>About</span></h2><p>'+esc(S.bio)+'</p></section>'+
+'<section id="doctoral" class="rv"><h2><span>Doctoral research</span></h2><p class="lead">Distilling neural networks into metaheuristic-built, interpretable models for embedded sensing</p><p>'+esc(S.status)+'</p>'+
+'<div class="stats"><div class="stat"><b>45</b><small>sources reviewed</small></div><div class="stat"><b>5</b><small>research questions</small></div><div class="stat"><b>4</b><small>target boards</small></div><div class="stat"><b>2030</b><small>planned completion</small></div></div>'+
+'<div class="cta" style="margin:0 0 8px">'+lk(S.docs.lit,'Literature review (PDF)')+lk(S.docs.plan,'Initial research plan (PDF)',1)+'</div>'+
+'<h3 style="font:700 1.05rem system-ui,sans-serif;margin:26px 0 0">Where I am now</h3><ul class="tl">'+p+'</ul>'+
+'<h3 style="font:700 1.05rem system-ui,sans-serif">Questions driving the work</h3><div class="grid">'+rq.map(function(q,i){return'<div class="card"><span class="tag p">RQ'+(i+1)+'</span><p style="margin:8px 0 0;color:var(--text)">'+q+'</p></div>'}).join('')+'</div>'+
+'<p class="lead" style="margin-top:16px">From the review: among the sources I examined, none combines whole-tree metaheuristic search, neural distillation, feature cost and measured microcontroller footprint in a single method. That is the gap this work targets.</p></section>'+
+'<section id="work" class="rv"><h2><span>Work</span></h2><p class="lead">Research, publications and projects</p><div class="grid">'+
+'<div class="card"><span class="tag">COURSE REPORT · 2025–2026</span><h3>Simulated annealing vs. population-based metaheuristics</h3><p>A semester study benchmarking convergence, solution quality and efficiency on continuous test functions, implemented in Python with Prof. Urszula Boryczka. This is coursework, not a publication.</p>'+lk(S.docs.sa,'Read the full report (PDF)')+'</div>'+
+'<div class="card"><span class="tag p">PUBLICATION · 2023</span><h3>Personnel Management and Position and Energy Tracking System for Electric Vehicles</h3><p><em>World Electric Vehicle Journal</em>, 14(1), 5.</p><a class="btn s" href="https://doi.org/10.3390/wevj14010005" target="_blank" rel="noopener">DOI</a></div>'+
+'<div class="card"><span class="tag">PROJECT · 2022</span><h3>RFID-based vehicle access system</h3><p>Final-year engineering project at Elizade University.</p></div>'+
+'<div class="card"><span class="tag">PROJECTS · 2020–2021</span><h3>Tidal plant and IoT sensing</h3><p>A mini tidal energy plant, and an Arduino/NodeMCU temperature and humidity monitor streaming to ThingSpeak.</p></div></div>'+
+'<div id="lab" class="lab"><h3 style="margin:0 0 4px;font:800 1.2rem system-ui,sans-serif">Optimization landscape lab</h3><p class="lead" style="margin:0 0 14px">'+F.length+' benchmark functions used to test metaheuristics. Pick one, then watch simulated annealing search it: accepting a worse move with probability $e^{-\\Delta f/T}$ while $T_k=T_0\\alpha^k$ cools.</p><div class="tabs">'+tabs+'</div>'+
+'<div class="labbody"><div><div class="fm" id="fm"></div><div class="info" id="mn"></div><button class="btn" id="run">Anneal ▶</button><div class="info" id="st">Press the button to start a search.</div></div><canvas id="cv" width="420" height="420"></canvas></div></div></section>'+
+'<section id="contact" class="rv"><h2><span>Contact</span></h2><div class="cta"><a class="btn" href="mailto:oluwagbotemioluwapelumi@gmail.com">Email me</a><a class="btn s" href="https://linkedin.com/in/oluwagbotemi-oluwapelumi" target="_blank" rel="noopener">LinkedIn</a>'+(S.gh?'<a class="btn s" href="'+esc(S.gh)+'" target="_blank" rel="noopener">GitHub</a>':'')+'</div></section></main><footer>© 2026 Oluwagbotemi Oluwapelumi · Sosnowiec, Poland</footer>';
+bind();show(cur);reveal();roles();
+}
+function show(i){cur=i;cancelAnimationFrame(raf);var f=F[i],cv=document.getElementById('cv');
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b,j){b.className=j==i?'on':''});
+cv.style.opacity=0;
+var N=140,v=[],lo=1/0,hi=-1/0,d=f[2];
+for(var j=0;j<N;j++)for(var k=0;k<N;k++){var q=f[3]((k/(N-1)*2-1)*d,(1-j/(N-1)*2)*d);v.push(q);if(q<lo)lo=q;if(q>hi)hi=q}
+var o=document.createElement('canvas');o.width=o.height=N;var oc=o.getContext('2d'),im=oc.createImageData(N,N);
+for(var n=0;n<v.length;n++){var c=col(Math.pow((v[n]-lo)/(hi-lo||1),.4));im.data[n*4]=c[0];im.data[n*4+1]=c[1];im.data[n*4+2]=c[2];im.data[n*4+3]=255}
+oc.putImageData(im,0,0);G={o:o,lo:lo,hi:hi};base();
+var fm=document.getElementById('fm');fm.textContent='$$'+f[1]+'$$';
+document.getElementById('mn').innerHTML='Search domain: $x,y\\in[-'+d+','+d+']$ · known minimum <b>'+f[3](f[4][0],f[4][1]).toFixed(3)+'</b> at ('+f[4][0]+', '+f[4][1]+') · the ○ marks it';
+setTimeout(function(){cv.style.opacity=1},40);tx(document.getElementById('lab'));
+}
+function px(x,y){var d=F[cur][2];return[(x/d+1)/2*420,(1-y/d)/2*420]}
+function base(){var cx=document.getElementById('cv').getContext('2d');cx.drawImage(G.o,0,0,420,420);var m=F[cur][4],q=px(m[0],m[1]);cx.strokeStyle='#fff';cx.lineWidth=2.5;cx.beginPath();cx.arc(q[0],q[1],9,0,7);cx.stroke()}
+function anneal(){cancelAnimationFrame(raf);base();var f=F[cur],d=f[2],fn=f[3],cx=document.getElementById('cv').getContext('2d'),
+x=(Math.random()*2-1)*d,y=(Math.random()*2-1)*d,fx=fn(x,y),best=fx,T0=.15*(G.hi-G.lo),T=T0,k=0,last=px(x,y);
+function cl(t){return Math.max(-d,Math.min(d,t))}
+function step(){for(var s=0;s<4&&k<420;s++,k++){var g=d*(.02+.25*T/T0),nx=cl(x+(Math.random()*2-1)*g),ny=cl(y+(Math.random()*2-1)*g),fy=fn(nx,ny);
+if(fy<fx||Math.random()<exp(-(fy-fx)/T)){x=nx;y=ny;fx=fy}if(fx<best)best=fx;T*=.985;
+var q=px(x,y);cx.strokeStyle='rgba(255,255,255,.75)';cx.lineWidth=1.6;cx.beginPath();cx.moveTo(last[0],last[1]);cx.lineTo(q[0],q[1]);cx.stroke();last=q}
+document.getElementById('st').innerHTML='Step '+k+' · $T$ = '+T.toFixed(3)+' · best $f$ = <b>'+best.toFixed(3)+'</b>';
+cx.fillStyle='#fff';cx.beginPath();cx.arc(last[0],last[1],4,0,7);cx.fill();
+if(k<420)raf=requestAnimationFrame(step);else tx(document.getElementById('st'))}
+step()}
+function tx(e){if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([e])}
+function bind(){
+[].forEach.call(document.querySelectorAll('.tabs button'),function(b){b.onclick=function(){show(+b.dataset.i)}});
+document.getElementById('run').onclick=anneal;
+[].forEach.call(document.querySelectorAll('.chip'),function(c){c.onclick=function(){if(!EDIT)return;var r=S.prog[+c.dataset.p],o=['next','now','done'];r[1]=o[(o.indexOf(r[1])+1)%3];render()}})}
+function reveal(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+[].forEach.call(document.querySelectorAll('.rv'),function(e){io.observe(e)})}
+var R=['PhD student in Computer Science','Metaheuristic optimization','Evolutionary computation','Interpretable TinyML'],ri=0,rt;
+function roles(){clearInterval(rt);var e=document.getElementById('role');rt=setInterval(function(){e.className='role o';setTimeout(function(){ri=(ri+1)%R.length;e.textContent=R[ri];e.className='role'},400)},3200)}
+/* ---- owner-only editing ---- */
+function save(){var c=document.documentElement.cloneNode(true);c.querySelector('#app').innerHTML='';c.querySelector('#app').className='';c.querySelector('#edit').innerHTML='';
+[].forEach.call(c.querySelectorAll('[id^=MJX],style[id^=MJX]'),function(e){e.remove()});
+c.querySelector('#data').textContent=JSON.stringify(S).replace(/</g,'\\u003c');return'<!DOCTYPE html>\n'+c.outerHTML}
+function editor(){var e=document.getElementById('edit');EDIT=true;render();
+e.innerHTML='<div class="pn"><b>Owner editor</b> (only you can see this)<label>About</label><textarea id="eb" rows="5"></textarea><label>Doctoral status</label><textarea id="es" rows="4"></textarea><label>GitHub URL</label><input type="text" id="eg" placeholder="https://github.com/…">'+
+'<label>Literature review PDF</label><input type="file" accept=".pdf" data-k="lit"><label>Research plan PDF</label><input type="file" accept=".pdf" data-k="plan"><label>Simulated annealing report PDF</label><input type="file" accept=".pdf" data-k="sa">'+
+'<p>Tip: click a progress chip to cycle done / in progress / next.</p><button class="btn" id="pub">Publish changes</button> <span id="ps"></span></div><button class="btn" id="tg">✎ Edit page</button>';
+document.getElementById('eb').value=S.bio;document.getElementById('es').value=S.status;document.getElementById('eg').value=S.gh;
+document.getElementById('tg').onclick=function(){e.classList.toggle('open')};
+[].forEach.call(e.querySelectorAll('input[type=file]'),function(i){i.onchange=async function(){var m=document.getElementById('ps');try{var a=await claude.use('assets');m.textContent='Uploading…';var r=await a.upload(i.files[0]);S.docs[i.dataset.k]=r.url;m.textContent='Uploaded. Now publish.';render()}catch(x){m.textContent='Upload failed.'}}});
+document.getElementById('pub').onclick=async function(){var m=document.getElementById('ps');S.bio=document.getElementById('eb').value;S.status=document.getElementById('es').value;S.gh=document.getElementById('eg').value.trim();
+try{var a=await claude.use('artifact');m.textContent='Publishing…';await a.publish(save())}catch(x){m.textContent='Could not publish: '+(x&&x.code||'error')}}}
+render();
+if(window.claude)claude.use('user').then(function(u){if(u&&u.isOwner())editor()}).catch(function(){});
+</script>
+</body>
+</html>
